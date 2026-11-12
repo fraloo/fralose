@@ -1,0 +1,11 @@
+# No build step: Netlify deploys the files from the repository root.
+[build]
+  publish = "."
+
+# Redirect unknown paths to the homepage with HTTP 301.
+# Existing files, including /og-image.png and /index.html, are served normally.
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
+  force = false
